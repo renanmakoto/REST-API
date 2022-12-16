@@ -6,3 +6,4 @@ The following modules were installed in order to run this API:
 - express.js
 - mongoose
 - bcrypt.js
+- jsonwebtoken
