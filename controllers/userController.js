@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 const userController = {
     register: async function (req, res) {
@@ -28,6 +29,10 @@ const userController = {
         const passwordAndUserMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
         if (!passwordAndUserMatch)
             return res.status(400).send('The email or password is incorrect')
+
+        const token = jwt.sign({ _id: selectedUser._id, admin: selectedUser.admin }, process.env.TOKEN_SECRET)
+
+        res.header('authorization-token', token)
 
         res.send("User logged")
     }
