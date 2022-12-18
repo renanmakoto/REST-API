@@ -1,9 +1,16 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const { loginValidation, registerValidation } = require('./validation')
 
 const userController = {
     register: async function (req, res) {
+
+        const { error } = registerValidation(req.body)
+        if (error) {
+            return res.status(400).send(error.message)
+        }
+
         const selectedUser = await User.findOne({ email: req.body.email })
         if (selectedUser)
             return res.status(400).send('The email provided already exists')
@@ -22,6 +29,12 @@ const userController = {
         }
     },
     login: async function (req, res) {
+
+        const { error } = loginValidation(req.body)
+        if (error) {
+            return res.status(400).send(error.message)
+        }
+
         const selectedUser = await User.findOne({ email: req.body.email })
         if (!selectedUser)
             return res.status(400).send('The email or password is incorrect')

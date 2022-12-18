@@ -24,7 +24,4 @@ app.listen(process.env.PORT, () => {
     console.log("Server running on port 3000")
 })
 
-
-//Routes were added in order to protect the access to whatever data is in the database
-
-//Insomnia was used in order see how it performs at the front end using HTTP method
+//A validation system was developed in order to warn the user when the login or the password do not contain the minimum characters required
