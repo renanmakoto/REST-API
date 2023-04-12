@@ -4,7 +4,7 @@
 
 <p align="center">The following modules were installed in order to run this API:</p>
 
-<p align="center">-bcrypt.js and the ones below:</p>
+<p align="center">-bcrypt.js <strong>and</strong> the ones below:</p>
 
 <div align="center">
   
