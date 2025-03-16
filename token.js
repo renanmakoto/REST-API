@@ -24,9 +24,9 @@ function testToken(token) {
     }
 }
 
-testToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwIiwidXNlcm5hbWUiOiJyZW5hbm1ha290b0BnbWFpbC5jb20iLCJpYXQiOjE2NzExOTQ5NzksImV4cCI6MTY3MTE5NTAzOX0.zZ59qv4NDC9tQG-OwTHPjgDCUVc4_KgbzYGpuhlq-vA")
+testToken("")
 
 // createToken()
 
-// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwIiwidXNlcm5hbWUiOiJyZW5hbm1ha290b0BnbWFpbC5jb20iLCJpYXQiOjE2NzExOTM5NTN9.QVrxVZy8cpRtX5UmavI-c-zUaqWd1gJJNx-3t5-AU3U"
+// const token = ""
 
